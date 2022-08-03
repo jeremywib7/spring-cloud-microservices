@@ -7,12 +7,12 @@ spring:
   datasource:
     password: 123456
     url: jdbc:postgresql://localhost:5432/customer
-    username: postgres
+    username: theworldwar3
   jpa:
     hibernate:
       ddl-auto: update
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
-        format_sql: true
+        format_sql: 'true'
     show-sql: true
