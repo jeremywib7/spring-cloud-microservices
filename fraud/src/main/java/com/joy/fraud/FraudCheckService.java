@@ -4,8 +4,13 @@ import java.time.LocalDateTime;
 
 import org.springframework.stereotype.Service;
 
+import lombok.AllArgsConstructor;
+
 @Service
-public record FraudCheckService(FraudCheckHistoryRepository fraudCheckHistoryRepository) {
+@AllArgsConstructor
+public class FraudCheckService {
+
+    private final FraudCheckHistoryRepository fraudCheckHistoryRepository;
 
     public boolean isFraudulentCustomer(Integer customerId) {
         fraudCheckHistoryRepository.save(
@@ -16,4 +21,5 @@ public record FraudCheckService(FraudCheckHistoryRepository fraudCheckHistoryRep
                         .build());
         return false;
     }
+    
 }
