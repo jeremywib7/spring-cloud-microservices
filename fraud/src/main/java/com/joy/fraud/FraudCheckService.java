@@ -21,5 +21,5 @@ public class FraudCheckService {
                         .build());
         return false;
     }
-    
+
 }
