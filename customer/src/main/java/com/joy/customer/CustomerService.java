@@ -3,7 +3,7 @@ package com.joy.customer;
 import org.springframework.stereotype.Service;
 
 @Service
-public class CustomerService {
+public record CustomerService(CustomerRepository customerRepository) {
     public void registerCustomer(CustomerRegistrationRequest customerRegistrationRequest) {
         Customer customer = Customer.builder()
                 .firstName(customerRegistrationRequest.firstName())
@@ -13,5 +13,6 @@ public class CustomerService {
         // todo check if email valid
         // todo check if email not taken
         // todo store customer in db
+      customerRepository.save(customer);
     }
 }
