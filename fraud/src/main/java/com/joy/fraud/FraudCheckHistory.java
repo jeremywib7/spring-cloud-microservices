@@ -13,7 +13,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 
-@Data 
+@Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
